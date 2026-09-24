@@ -1,6 +1,6 @@
 # Sezzle Challenge
 
-Go API and React frontend in one repository.
+React + Go calculator challenge in monorepo.
 
 ## Requirements
 
