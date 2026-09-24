@@ -1,0 +1,16 @@
+{
+  "name": "sezzle-challenge",
+  "private": true,
+  "workspaces": ["frontend"],
+  "scripts": {
+    "dev": "npm run dev --workspace frontend",
+    "build": "npm run build --workspace frontend",
+    "test": "npm run test:frontend && npm run test:backend",
+    "test:frontend": "npm run test --workspace frontend",
+    "test:backend": "cd backend && go test ./...",
+    "coverage": "npm run coverage:frontend && npm run coverage:backend",
+    "coverage:frontend": "npm run coverage --workspace frontend",
+    "coverage:backend": "cd backend && go test -coverprofile=coverage.out ./...",
+    "lint": "npm run lint --workspace frontend"
+  }
+}
