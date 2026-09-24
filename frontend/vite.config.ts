@@ -6,6 +6,11 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
     host: '0.0.0.0',
+    proxy: {
+      '/calculations': {
+        target: process.env.API_PROXY_TARGET ?? 'http://localhost:8080',
+      },
+    },
   },
   test: {
     environment: 'jsdom',
