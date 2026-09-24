@@ -1,6 +1,6 @@
 # Sezzle Challenge
 
-React + Go calculator challenge in monorepo.
+Full-stack calculator application with a React frontend and a go microservice. The frontend consumes the backend API to perform basic and advanced arithmetic operations (+,-,* and /).
 
 ## Requirements
 
