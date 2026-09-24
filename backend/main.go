@@ -9,6 +9,7 @@ import (
 
 func newHandler() http.Handler {
 	mux := http.NewServeMux()
+	mux.HandleFunc("POST /calculations", handleCalculation)
 	mux.HandleFunc("GET /health", func(w http.ResponseWriter, _ *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
 		if err := json.NewEncoder(w).Encode(map[string]string{"status": "ok"}); err != nil {
